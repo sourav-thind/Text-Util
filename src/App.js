@@ -13,7 +13,8 @@ import {
 }from "react-router-dom";
 
 function App() {
-  const [mode, setMode] = useState("light"); // tells us whether dark mode is enabled or not
+  //const [mode, setMode] = useState("light"); // tells us whether dark mode is enabled or not
+  const [cls, setcls]= useState("light"); 
   const [alert, setAlert]= useState(null); 
   const showAlert =(message,type)=>{
     
@@ -38,31 +39,60 @@ const removeBgClasses = () => {
  const  toggleMode = (cls)=>{
   removeBgClasses()
   console.log(cls);
-  document.body.classList.add('bg-'+cls)
-    if (mode==="light"){
-      setMode("dark");
-      document.body.style.backgroundColor  = '#042743';
-      showAlert("Dark Mode has been Enabled","success");
-      document.title='TextUtils - Dark Mode';
-    }
-    else{
-      setMode("light");
-      document.body.style.backgroundColor = 'white';
-      showAlert("Light Mode has been Enabled","success");
-      document.title='TextUtils - Light Mode';
-    }
+
+   document.body.classList.add('bg-'+cls)
+
+  
+    switch ( cls)
+{
+  
+   case "dark":
+    
+    setcls("dark");
+   // document.body.style.backgroundColor = '#042743';
+   //document.body.style.textDecorationColor='#000000';
+      showAlert(" Dark Mode has been Enabled","success");
+      break;
+   case "light":
+    
+    setcls("light");
+      document.body.style.backgroundColor  = 'white';
+      document.body.style.textDecorationColor = "#000000";
+      showAlert(" Light Mode has been Enabled","success");
+      break;
+   case "primary":
+      setcls('primary')
+      showAlert(" Blue Mode has been Enabled","success");
+      break;
+   case "danger":
+    
+    setcls('danger')
+      showAlert(" Red Mode has been Enabled","success");
+      break;
+   case "warning":
+    setcls("warning")
+      showAlert(" Yellow Mode has been Enabled","success");
+      break;
+   case "success":
+    setcls("success")
+      showAlert(" Green Mode has been Enabled","success");
+      break;
+
+   default: 
+       alert('Default case');
+}
   }
   return (
     <>  
 
  <Router>
- <Navbar title="TextUtils" about="About US" mode={mode} toggleMode={toggleMode}/>
+ <Navbar title="TextUtils" about="About US" cls={cls} toggleMode={toggleMode}/>
  <Alert alert={alert}/>
   
         <Routes>
-          <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}  />} />
+          <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze below"  cls={cls}  />} />
           
-          <Route exact path="/about" element={<About mode={mode}/>}/>
+          <Route exact path="/about" element={<About  cls={cls}/>}/>
          
         </Routes>
  

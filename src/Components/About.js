@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function About(props) {
     ///////////////////////////////////////////////////////////////////////////////
@@ -9,7 +9,7 @@ export default function About(props) {
     //     backgroundColor:'black',
        
     // })
-    // const [btnText, SetBtnText] =useState("Enable Dark Mode");
+    // const [btnText, SetBtnText] =useState("Enable Dark cls");
  
     
     // const toggleStyle = ()=>{
@@ -19,7 +19,7 @@ export default function About(props) {
     //             backgroundColor:'white',
               
     //          })
-    //          SetBtnText("Enable Dark Mode");
+    //          SetBtnText("Enable Dark cls");
     //      }
     //      else{
     //         setMyStyle({
@@ -27,55 +27,56 @@ export default function About(props) {
     //             backgroundColor:'black',
                
     //          })
-    //          SetBtnText("Enable Light Mode");
+    //          SetBtnText("Enable Light cls");
     //      }
     // }
   return (
-
-    <div style={{backgroundColor: props.mode==='light'?'white':'#042743' , color : props.mode==='light'?'black':'white'}}>
-        <h1>About US</h1>
-        <div className="accordion" id="accordionExample" style={{backgroundColor: props.mode==='light'?'black':'white' , color : props.mode==='light'?'white':'black'}}>
+<div className="mx-5 ">
+    <div className='mt-2 ' >
+        <h1 style={{color: props.cls==='light'?'black':'white'}}>About US</h1>
+        <div className="accordion" id="accordionExample" style={{backgroundColor: props.cls==='light'?'black':'white' , color : props.cls==='light'?'white':'black'}}>
             
   <div className="accordion-item">
     <h2 className="accordion-header" id="headingOne" >
-      <button className="accordion-button" type="button"  data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={{backgroundColor: props.mode==='light'?'black':'white' , color : props.mode==='light'?'white':'black'}}>
-        Accordion Item #1
+      <button className="accordion-button" type="button"  data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={{backgroundColor: props.cls==='light'?'black':'white' , color : props.cls==='light'?'white':'black'}}>
+        About The Application
       </button>
     </h2>
     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div className="accordion-body" style={{backgroundColor: props.mode==='light'?'white':'black' , color : props.mode==='light'?'black':'white'}}>
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      <div className="accordion-body" style={{backgroundColor: props.cls==='light'?'white':'black' , color : props.cls==='light'?'black':'white'}}>
+        <strong>Text Utility Application</strong> This a text utility application where user can convert the text in uppercase, lowercase and if there is any extra space they can remove it too, They can copy the text in the textbox. Also there is a button to clear the textbox too. After transforming the text Page shows a message that the text has been modify. The text is previewed at the bottom most part of the Page. Well you are already here so I shouldn't describe About Page, apart from the fact that Accordian was used here.
       </div>
     </div>
   </div>
   <div className="accordion-item">
     <h2 className="accordion-header" id="headingTwo" >
-      <button className="accordion-button collapsed" type="button"  data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style={{backgroundColor: props.mode==='light'?'black':'white' , color : props.mode==='light'?'white':'black'}}>
-        Accordion Item #2
+      <button className="accordion-button collapsed" type="button"  data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style={{backgroundColor: props.cls==='light'?'black':'white' , color : props.cls==='light'?'white':'black'}}>
+       Additional functionality
       </button>
     </h2>
     <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-      <div className="accordion-body" style={{backgroundColor: props.mode==='light'?'white':'black' , color : props.mode==='light'?'black':'white'}}>
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      <div className="accordion-body" style={{backgroundColor: props.cls==='light'?'white':'black' , color : props.cls==='light'?'black':'white'}}>
+       Apart from that, this application can also count words and characters, could be helpful in assignments too. Another thing is that it can also calculate the time a normal human being can take to read it, its not that accurate as it may differ from person to person and according to length of a word, so average speed is taken into context. Also, I tried to take it further from all this and impose colour theme thing here, Although I spent so much time that It tried to make me color blind but I succed at last.
       </div>
     </div>
   </div>
   <div className="accordion-item">
     <h2 className="accordion-header" id="headingThree" >
-      <button className="accordion-button collapsed" type="button"  data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style={{backgroundColor: props.mode==='light'?'black':'white' , color : props.mode==='light'?'white':'black'}}>
-        Accordion Item #3
+      <button className="accordion-button collapsed " type="button"  data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style={{backgroundColor: props.cls==='light'?'black':'white' , color : props.cls==='light'?'white':'black'}}>
+        Resources used and about Developer
       </button>
     </h2>
     <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-      <div className="accordion-body" style={{backgroundColor: props.mode==='light'?'white':'black' , color : props.mode==='light'?'black':'white'}}>
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      <div className="accordion-body " style={{backgroundColor: props.cls==='light'?'white':'black' , color : props.cls==='light'?'black':'white'}}>
+        This React application is developed by Souravpreet Singh, currently studying in Sheridan College, will graduate in April,2024(not 100% sure but lets hope so). ReactJS is the main framework used in developing this application. React-Hooks like useState, React-Dom-Router and a hell lot of Javascript is used. NodeJs was also partner in crime here. Styling department was handled by Mr. Bootstrap. For the weird combination of characters called code <a href="https://github.com/sourav-thind/Text-Util">CLICK HERE</a>. 
       </div>
     </div>
   </div>
 </div>
-       {/* this button is the individul dark mode button but it is hidden now */}
+       {/* this button is the individul dark cls button but it is hidden now */}
       {/* <button onClick={toggleStyle} className="btn" style={myStyle} >{btnText}</button>  */}
 
+    </div>
     </div>
   )
 }
