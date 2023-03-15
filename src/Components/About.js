@@ -31,7 +31,7 @@ export default function About(props) {
     //      }
     // }
   return (
-<div className="mx-5 ">
+<div className="mx-3 ">
     <div className='mt-2 ' >
         <h1 style={{color: props.cls==='light'?'black':'white'}}>About US</h1>
         <div className="accordion" id="accordionExample" style={{backgroundColor: props.cls==='light'?'black':'white' , color : props.cls==='light'?'white':'black'}}>

@@ -42,16 +42,16 @@ export default function TextForm(props) {
     
     return (
         <>
-        <div className='mb-3 mx-5' style={{color: props.cls==='light'?'black':'white'}}>
+        <div className='mb-3 mx-3 text-justify' style={{color: props.cls==='light'?'black':'white'}}>
             <h1>{props.heading} </h1>
-            <textarea className={`form-control ${props.cls==='light'?'input':''}`} placeholder='Enter Your Text Here' value={text} onChange={handleOnChange} style={{backgroundColor: props.cls==='light'?'grey':'white' , color : props.cls==='light'?'white':'black'}} id="myBox" rows="8"></textarea>
+            <textarea className={`form-control  text-justify ${props.cls==='light'?'input':''}`} placeholder='Enter Your Text Here' value={text} onChange={handleOnChange} style={{backgroundColor: props.cls==='light'?'grey':'white' , color : props.cls==='light'?'white':'black'}} id="myBox" rows="8"></textarea>
             <button disabled={text.length===0}  className={`btn mx-1 mt-2 btn-${props.cls=== 'primary'? 'dark' : 'primary'} `}  onClick={handleUpClick}>Convert To UPPERCASE</button>
             <button disabled={text.length===0} className={`btn mx-1 mt-2 btn-${props.cls=== 'primary'? 'dark' : 'primary'} `}  onClick={handleLoClick}>Convert To lowercase</button>
             <button disabled={text.length===0} className={`btn mx-1 mt-2 btn-${props.cls=== 'primary'? 'dark' : 'primary'} `}  onClick={handleExtraSpaces}>Remove Extra Spaces</button>
             <button disabled={text.length===0} className={`btn mx-1 mt-2 btn-${props.cls=== 'primary'? 'dark' : 'primary'} `}  onClick={handleCopy}>Copy</button>
             <button disabled={text.length===0} className={`btn mx-1 mt-2 btn-${props.cls=== 'primary'? 'dark' : 'primary'} `}  onClick={handleClClick}>Clear</button>
     </div>
-    <div className="container" style={{color: props.cls==='light'?'black':'white'}}>
+    <div className="container mx-3" style={{color: props.cls==='light'?'black':'white'}}>
 
         <h1>Your Text Summary </h1>
         <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length  } words and {text.length} characters</p>
