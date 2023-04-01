@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer';
 
 export default function About(props) {
     ///////////////////////////////////////////////////////////////////////////////
@@ -31,8 +32,8 @@ export default function About(props) {
     //      }
     // }
   return (
-<div className="mx-3 ">
-    <div className='mt-2 ' >
+<div >
+    <div className='mt-2 mx-3' >
         <h1 style={{color: props.cls==='light'?'black':'white'}}>About US</h1>
         <div className="accordion" id="accordionExample" style={{backgroundColor: props.cls==='light'?'black':'white' , color : props.cls==='light'?'white':'black'}}>
             
@@ -77,6 +78,7 @@ export default function About(props) {
       {/* <button onClick={toggleStyle} className="btn" style={myStyle} >{btnText}</button>  */}
 
     </div>
+    <Footer/>
     </div>
   )
 }
